@@ -19,7 +19,7 @@ router.delete('/:id', async (req,res)=>{
 })
 
 router.post('/', async (req, res) => {
-    await service.addPost(req.body.text); 
+    await service.addPost(req.body.text, req.body.id); 
     res.send('Post added')
 });
 
